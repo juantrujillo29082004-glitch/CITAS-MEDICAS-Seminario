@@ -1,0 +1,68 @@
+/* Modern UI styles for Citas Médicas */
+/* ------------------------------------------------ */
+/* Root variables for easy theming */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f5f7fa;
+    --danger-color: #e74c3c;
+    --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --border-radius: 0.5rem;
+    --transition-speed: 0.2s;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form layout – better spacing on small screens */
+@media (max-width: 576px) {
+    #cita-form .col-md-6,
+    #cita-form .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Buttons – modern look with hover effects */
+.action-btn {
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Override Bootstrap primary/secondary button colors for consistency */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #357ab8;
+    border-color: #357ab8;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+
+/* Badge – slightly larger and rounded */
+.badge {
+    font-size: 0.85rem;
+    padding: 0.4em 0.6em;
+    border-radius: var(--border-radius);
+}
